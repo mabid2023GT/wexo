@@ -17,7 +17,7 @@ const Query = () => {
     const handleBlur = () => setIsFocused(false);
     
     return (
-       <div className="query-container">
+       <>
             <div className={`search-section ${isFocused ? 'focused' : ''}`}>
                 <input 
                     type="text" 
@@ -33,7 +33,7 @@ const Query = () => {
                     Search
                 </button>
             </div>
-       </div> 
+       </> 
     );
 };
 

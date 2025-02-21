@@ -1,0 +1,89 @@
+
+:root {
+    --query-results-width: 90%;
+    --query-results-height: 95%;
+    --padding-inline: calc((100% - var(--query-results-width)) * 0.5);
+    --title-top-bottom-padding: calc(var(--query-results-height) * 0.01);
+    // Base font size for better scalability
+    --font-size-base: 1.5rem;
+}
+
+// Media queries for responsive design
+// Adjusting the font size on different screen sizes
+@media (max-width: 1200px) {
+    :root {
+        --title-top-bottom-padding: calc(var(--query-results-height) * 0.015);
+        // Adjust font size for bigger screens (like laptops and desktops).
+        --font-size-base: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --title-top-bottom-padding: calc(var(--query-results-height) * 0.02);
+        // Adjust font size for tablets.
+        --font-size-base: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --title-top-bottom-padding: calc(var(--query-results-height) * 0.025);
+        // Adjust font size for mobile screens.
+        --font-size-base: 0.85rem;
+    }
+}
+
+.query-results {
+    width: var(--query-results-width);
+    height: var(--query-results-height);
+    background: #fff;
+    padding-inline: var(--padding-inline);
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(4, 251, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    h3 {
+        width: var(--query-results-width);
+        font-size: var(--font-size-base);
+        font-weight: bold;
+        border-bottom: 0.1rem solid #000000;
+    }
+
+    .results-list {
+        width: var(--query-results-width);
+        height: var(--query-results-height);
+        margin: 0;
+        overflow: auto;
+
+        ul {
+            list-style: none;
+            text-align: start;
+            padding-bottom: var(--title-top-bottom-padding);
+            margin: 0;  /* Optional: remove default margin */
+        }
+
+        li {
+            padding-inline-start: 2%;
+            padding-block: var(--title-top-bottom-padding) var(--title-top-bottom-padding);
+            font-size: var(--font-size-base);
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #000000;
+                color: #fff;
+            }
+        }
+
+        .even-row {
+            background-color: grey;
+        }
+
+        .odd-row {
+            background-color: rgb(212, 212, 212);
+        }
+    }
+}

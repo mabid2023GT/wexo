@@ -16,3 +16,8 @@ $footer-height: 7.5%;
 $weather-panel-padding-inline: 2.5%;
 $weather-panel-width: calc(100% - 2 * $weather-panel-padding-inline);
 $weather-panel-height: calc($app-height - $header-height - $footer-height);
+
+// Weather Panel Sections variables
+$weather-panel-title-height: 10%;
+$weather-panel-search-section-height: 10%;
+$weather-panel-results-height: calc(($weather-panel-height - $weather-panel-title-height - $weather-panel-search-section-height) * 0.9);
