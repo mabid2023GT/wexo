@@ -1,13 +1,10 @@
-
-$padding-start: 1%;
-$header-width: calc(100% - $padding-start);
-$header-height: 10%;
+@use 'variables';
 
 .header {
     // Ensure the header spans the full width of the page
-    width: $header-width; 
+    width: variables.$header-width; 
     // Ensure the header spans the 10% of the page height
-    height: $header-height;
+    height: variables.$header-height;
     background: #01aaf3;
     // Setup header display
     display: flex;
@@ -16,7 +13,7 @@ $header-height: 10%;
     // Vertically center the content
     align-items: center;
     // Ensure the logo or app title is displayed clearly
-    padding-inline-start: $padding-start;
+    padding-inline-start: variables.$header-padding-start;
 
 
     .logo {

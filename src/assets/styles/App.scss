@@ -1,5 +1,7 @@
+@use 'variables';
+
 .app {
-  width: 100vw;
-  height: 100vh;
+  width: variables.$app-width;
+  height: variables.$app-height;
   background: #f34747;
 }

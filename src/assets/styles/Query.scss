@@ -1,9 +1,174 @@
+// file variables
+:root {
+    // query-container variables
+    --q-container-width: 50%;
+    --q-container-height: 10%;
+    //search-section variables
+    --search-section-width: 60%;
+    --search-section-height: 60%;
+    --search-section-input-font-size: 1.4rem;
+    //search-button variables
+    --search-button-width: 20%;
+    --search-button-height: 60%;
+    --search-button-font-size: 1.4rem;
+    --q-margin-inline: calc((100% - var(--q-container-width)) * 0.5);
+}
 
-.query {
-    width: 100vw;
-    height: auto;
-    .logo {
-        width: 25%;
-        height: 25%;
+// query-container variables
+$query-border-radius: 25px;
+$query-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+// Make layout responsive across different screen sizes.
+@media (max-width: 1200px) {
+    :root {
+        // query-container variables
+        --q-container-width: 60%;
+        --q-container-height: 15%;
+        //search-section variables
+        --search-section-width: 60%;
+        --search-section-height: 60%;
+        --search-section-input-font-size: 1.3rem;
+        //search-button variables
+        --search-button-width: 20%;
+        --search-button-height: 50%;
+        --search-button-font-size: 1.3rem;
+        --q-margin-inline: calc((100% - var(--q-container-width)) * 0.5);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        // query-container variables
+        --q-container-width: 80%;
+        --q-container-height: 12.5%;
+        //search-section variables
+        --search-section-width: 60%;
+        --search-section-height: 60%;
+        --search-section-input-font-size: 1.2rem;
+        //search-button variables
+        --search-button-width: 25%;
+        --search-button-height: 45%;
+        --search-button-font-size: 1.2rem;
+        --q-margin-inline: calc((100% - var(--q-container-width)) * 0.5);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        // query-container variables
+        --q-container-width: 90%;
+        --q-container-height: 15%;
+        //search-section variables
+        --search-section-width: 70%;
+        --search-section-height: 50%;
+        --search-section-input-font-size: 0.75rem;
+        //search-button variables
+        --search-button-width: 25%;
+        --search-button-height: 40%;
+        --search-button-font-size: 0.75rem;
+        --q-margin-inline: calc((100% - var(--q-container-width)) * 0.5);
+    }
+}
+
+
+
+.query-container {
+    width: var(--q-container-width);
+    height: var(--q-container-height);
+    background: #4d93fd;
+    // Uses flexbox layout to arrange child elements in a flexible way
+    display: flex;
+    // Horizontally centers the child elements (search box) within the container
+    justify-content: space-around;
+    // Vertically centers the child elements (search box) within the container
+    align-items: center;
+    margin-inline: var(--q-margin-inline);
+
+    border-radius: $query-border-radius;
+    box-shadow: $query-shadow;
+
+    .search-section {
+        width: var(--search-section-width);
+        height: var(--search-section-height);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: #fff;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        border-radius: $query-border-radius;
+        box-shadow: $query-shadow;
+        
+        // Focus effect for the section
+        &.focused {
+            // Focus line around the section
+            border: 0.2rem solid #f70000;  
+            // Optional focus glow
+            box-shadow: 0 0 1.5rem rgba(154, 255, 3, 0.5);  
+        }
+
+        input {
+            width: 95%;
+            height: 95%;
+            // Make background transparent
+            background: transparent;
+            // Remove border
+            border: none;
+            // Remove outline on focus
+            outline: none;
+            font-size: var(--search-section-input-font-size); 
+        }
+    }
+
+    .search-button {
+        width: var(--search-button-width);
+        height: var(--search-button-height);
+        background: linear-gradient(135deg, #fbbd5d, #f4a261);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // Rounded corners for modern feel
+        border-radius: 3rem;
+        // Soft shadow for depth, in rem
+        box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+        // Smooth transition for hover effects
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        
+        &:hover {
+            // Stronger shadow on hover
+            box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.15);  
+            // Button lifts on hover
+            transform: translateY(-0.3rem);  
+        }
+
+        button {
+            width: 95%;
+            height: 70%;
+            // No border for clean look
+            border: none; 
+            background: transparent; 
+            // text color
+            color: #fff;
+            font-size:  var(--search-button-font-size);
+            font-weight: bold;
+            // Rounded corners on button
+            border-radius: 2rem;
+            // Pointer cursor on hover
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            &:focus {
+                // Remove focus outline for cleaner look
+                outline: none;
+            }
+
+            &:active {
+                // Slightly shrink when the button is clicked
+                transform: scale(0.98);   
+            }
+        }
     }
 }

@@ -1,0 +1,14 @@
+@use 'variables';
+
+.panel {
+    width: variables.$weather-panel-width;
+    height: variables.$weather-panel-height;
+    // Set equal padding on the left and right sides.
+    padding-inline: variables.$weather-panel-padding-inline;
+
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+}

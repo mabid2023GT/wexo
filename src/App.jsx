@@ -1,6 +1,6 @@
 import './assets/styles/App.scss';
-import Header from './components/Header.jsx';
-import Query from './components/Query';
+import Header from './components/Header';
+import WeatherPanel from './components/WeatherPanel';
 import Footer from './components/Footer';
 
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className='app'>
       <Header />
-      <Query />
+      <WeatherPanel />
       <Footer />
     </div>
   )
