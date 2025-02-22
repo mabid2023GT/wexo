@@ -1,6 +1,6 @@
 import '../assets/styles/Query.scss';
 import {useState} from 'react';
-import { useWeatherContext } from '../context/use-weather-context';
+import { useWeatherContext } from '../hooks/use-weather-context';
 
 const Query = () => {
     const [searchQuery, setSearchQuery] = useState('');

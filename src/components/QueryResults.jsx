@@ -1,5 +1,5 @@
 import '../assets/styles/QueryResults.scss';
-import { useWeatherContext } from '../context/use-weather-context';
+import { useWeatherContext } from '../hooks/use-weather-context';
 import CircularProgress from './CircularProgress';
 
 const QueryResults = () => {

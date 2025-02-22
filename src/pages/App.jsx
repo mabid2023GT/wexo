@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import WeatherPanel from '../components/WeatherPanel';
 import Footer from '../components/Footer';
 
-
 function App() {
 
   return (
