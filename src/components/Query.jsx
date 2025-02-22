@@ -1,14 +1,19 @@
 import '../assets/styles/Query.scss';
 import {useState} from 'react';
+import { useWeatherContext } from '../context/use-weather-context';
 
 const Query = () => {
     const [searchQuery, setSearchQuery] = useState('');
+    // Access searchCity and loading from context
+    const { searchCity, cityLoading } = useWeatherContext();
     const [isFocused, setIsFocused] = useState(false);
     
     // Function to handle search button click
     const handleSearch = () => {
         if(searchQuery) {
-            // TO-DO: Trigger fetchWeather to get results
+            // Trigger city search from context
+            searchCity(searchQuery);
+            // Clear input after search
             setSearchQuery('');
         }
     }; 
@@ -29,7 +34,10 @@ const Query = () => {
                 />
             </div>
             <div className="search-button">
-                <button onClick={handleSearch}>
+                <button 
+                    onClick={handleSearch}
+                    disabled={cityLoading}
+                >
                     Search
                 </button>
             </div>
