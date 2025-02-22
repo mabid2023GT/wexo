@@ -1,0 +1,7 @@
+@use 'variables';
+
+.app {
+  width: variables.$app-width;
+  height: variables.$app-height;
+  background: variables.$app-background-color;
+}

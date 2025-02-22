@@ -1,0 +1,147 @@
+.error-popup-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+
+    .error-popup {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        /* 80% of the viewport width */
+        max-width: 450px;
+        /* Set a reasonable max-width */
+        max-height: 80vh;
+        /* Limit max height for large screens */
+        text-align: center;
+        animation: fadeIn 0.3s ease-in-out;
+        overflow: auto;
+
+        .error-icon {
+            color: #dc2626;
+            width: 12vw;
+            /* Smaller icon size for balance */
+            height: 12vw;
+            margin: 0 auto 1rem;
+        }
+
+        .error-message {
+            color: #1f2937;
+            font-size: 1.25rem;
+            /* Use rem for consistent sizing */
+            margin-bottom: 1.5rem;
+        }
+
+        .error-button {
+            background: #dc2626;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background: #b91c1c;
+            }
+        }
+    }
+}
+
+// Smooth fade-in effect
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// Media Queries for different screen sizes
+@media screen and (max-width: 768px) {
+    .error-popup-overlay {
+        .error-popup {
+            width: 85%;
+            /* Make the popup smaller on tablets */
+            max-width: 400px;
+            /* Adjust max-width for tablets */
+            padding: 1.25rem;
+            /* Slightly reduce padding */
+        }
+
+        .error-icon {
+            width: 18vw;
+            /* Adjust icon size on small screens */
+            height: 18vw;
+        }
+
+        .error-message {
+            font-size: 1.125rem;
+            /* Slightly smaller font for better readability */
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .error-popup-overlay {
+        .error-popup {
+            width: 90%;
+            /* Full width on mobile */
+            max-width: 350px;
+            /* Reduce max-width */
+            padding: 1rem;
+            /* Adjust padding for mobile */
+        }
+
+        .error-icon {
+            width: 20vw;
+            /* Adjust icon size for mobile */
+            height: 20vw;
+        }
+
+        .error-message {
+            font-size: 1rem;
+            /* Adjust font size for small screens */
+        }
+    }
+}
+
+// For very large screens (wider than 1200px)
+@media screen and (min-width: 1200px) {
+    .error-popup-overlay {
+        .error-popup {
+            width: 35%;
+            /* Reduced width on large screens */
+            max-width: 600px;
+            /* Keep max-width smaller on very large screens */
+            padding: 2rem;
+            /* Adjust padding */
+        }
+
+        .error-icon {
+            width: 7vw;
+            /* Even smaller icon on large screens */
+            height: 7vw;
+            margin: 0 auto 1rem;
+        }
+
+        .error-message {
+            font-size: 1.25rem;
+            /* Use a smaller, consistent font size */
+        }
+
+        .error-button {
+            padding: 0.75rem 1.5rem;
+            /* Keep the button proportional */
+        }
+    }
+}

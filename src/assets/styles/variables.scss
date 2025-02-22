@@ -1,0 +1,24 @@
+
+// app variables
+$app-width: 100vw;
+$app-height: 100vh;
+$app-background-color: linear-gradient(#8278DA, #121C84);
+
+// header variables
+$header-padding-start: 1%;
+$header-width: calc(100% - $header-padding-start);
+$header-height: 10%;
+
+// footer variables
+$footer-width: 100%;
+$footer-height: 7.5%;
+
+// Weather Panel variables
+$weather-panel-padding-inline: 2.5%;
+$weather-panel-width: calc(100% - 2 * $weather-panel-padding-inline);
+$weather-panel-height: calc($app-height - $header-height - $footer-height);
+
+// Weather Panel Sections variables
+$weather-panel-title-height: 10%;
+$weather-panel-search-section-height: 10%;
+$weather-panel-results-height: calc(($weather-panel-height - $weather-panel-title-height - $weather-panel-search-section-height) * 0.9);

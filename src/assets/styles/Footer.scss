@@ -1,0 +1,14 @@
+@use 'variables';
+
+.footer {
+    width: variables.$footer-width;
+    height: variables.$footer-height;
+    color: #D1D1FF;
+    // Ensure the footer content is aligned in the center both vertically and horizontally.
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // Ensure the footer is aligned at the bottom of the page.
+    position: fixed;
+    bottom: 0;
+}

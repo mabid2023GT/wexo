@@ -1,0 +1,47 @@
+@use 'variables';
+
+.header {
+    // Ensure the header spans the full width of the page
+    width: variables.$header-width; 
+    // Ensure the header spans the 10% of the page height
+    height: variables.$header-height;
+    // Setup header display
+    display: flex;
+    // Ensure the logo and app name are displayed on the start side
+    justify-content: start;
+    // Vertically center the content
+    align-items: center;
+    // Ensure the logo or app title is displayed clearly
+    padding-inline-start: variables.$header-padding-start;
+
+
+    .logo {
+        height: 100%;
+        width: auto;
+        display: flex;
+        // Vertically center the logo image
+        align-items: center;
+        img {
+            // Set the height of the logo image
+            height: 70%;
+            // Maintain aspect ratio of the logo
+            width: auto;
+        }
+    }
+
+    .appTitle {
+        // Adjust margin for big-sized screens
+        margin-inline-start: 2%;
+        color: #FFFFFF;
+
+        // Adjust margin for tablet-sized screens
+        @media (max-width: 768px) {
+            margin-inline-start: 3%;
+        }
+        
+        // Adjust margin for mobile-sized screens
+        @media (max-width: 480px) {
+            margin-inline-start: 5%;
+        }
+    }
+}

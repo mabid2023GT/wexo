@@ -1,0 +1,44 @@
+@use 'variables';
+
+.panel {
+    width: variables.$weather-panel-width;
+    height: variables.$weather-panel-height;
+    // Set equal padding on the left and right sides.
+    padding-inline: variables.$weather-panel-padding-inline;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .title-container {
+        height: variables.$weather-panel-title-height;
+        width: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .query-container {
+        width: 100%;
+        height: variables.$weather-panel-search-section-height;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .query-results-container {
+        width: 100%;
+        height: variables.$weather-panel-results-height;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

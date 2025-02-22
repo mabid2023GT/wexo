@@ -1,0 +1,42 @@
+.circular-progress-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.circular-progress {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.circle-inner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 5px solid #4db8ff;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,55 @@
+
+// The html tag sets a base font size for the document, 
+// making it easier to calculate rem-based values
+html {
+  // Base font size for the entire app, set to 16px
+  font-size: 18px; 
+}
+
+// The body tag applies default styles to the entire body of the document
+body {
+  margin: 0;
+  // Global font for the body text
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  // Sets the line height for better readability
+  line-height: 2;
+
+  // Media queries for responsive design
+  // Adjusting the font size on different screen sizes
+  @media (max-width: 1200px) {
+    // Adjust font size for bigger screens (like laptops and desktops).
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    // Adjust font size for tablets.
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 480px) {
+    // Adjust font size for mobile screens.
+    font-size: 0.85rem;
+  }
+
+  // This rule ensures consistent font styling for all text elements in the app.
+  h1, h2, h3, h4, h5, h6, p, span, a, li {
+    // Ensures that all text has the same font weight (normal)
+    font-weight: 400;
+    // Default font size for all these elements
+    font-size: 1rem;
+
+    // Media queries for responsive font size adjustments
+    @media (max-width: 768px) {
+      // Adjust smaller font size on smaller screens (tablets)
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      // Adjust smaller font size on smaller screens (mobile)
+      font-size: 0.8rem;
+    }
+  }
+
+}
