@@ -1,25 +1,25 @@
 
-:root {
+.query-results {
     --query-results-width: 90%;
     --query-results-height: 95%;
     --padding-inline: calc((100% - var(--query-results-width)) * 0.5);
     --title-top-bottom-padding: calc(var(--query-results-height) * 0.01);
     // Base font size for better scalability
-    --font-size-base: 1.5rem;
+    --font-size-base: 1.3rem;
 }
 
 // Media queries for responsive design
 // Adjusting the font size on different screen sizes
 @media (max-width: 1200px) {
-    :root {
+    .query-results {
         --title-top-bottom-padding: calc(var(--query-results-height) * 0.015);
         // Adjust font size for bigger screens (like laptops and desktops).
-        --font-size-base: 1.3rem;
+        --font-size-base: 1.2rem;
     }
 }
 
 @media (max-width: 768px) {
-    :root {
+    .query-results {
         --title-top-bottom-padding: calc(var(--query-results-height) * 0.02);
         // Adjust font size for tablets.
         --font-size-base: 1rem;
@@ -27,7 +27,7 @@
 }
 
 @media (max-width: 480px) {
-    :root {
+    .query-results {
         --title-top-bottom-padding: calc(var(--query-results-height) * 0.025);
         // Adjust font size for mobile screens.
         --font-size-base: 0.85rem;
@@ -37,7 +37,7 @@
 .query-results {
     width: var(--query-results-width);
     height: var(--query-results-height);
-    background: #fff;
+    // background: #fff;
     padding-inline: var(--padding-inline);
     border-radius: 2rem;
     box-shadow: 0 1rem 2rem rgba(4, 251, 255, 0.1);
@@ -49,7 +49,8 @@
         width: var(--query-results-width);
         font-size: var(--font-size-base);
         font-weight: bold;
-        border-bottom: 0.1rem solid #000000;
+        border-bottom: 0.1rem solid #ffffff;
+        color: #ffffff;
     }
 
     .results-list {
@@ -71,19 +72,20 @@
             font-size: var(--font-size-base);
             cursor: pointer;
             transition: background 0.3s ease-in-out;
+            color: #F5F5FF;
 
             &:hover {
-                background-color: #000000;
-                color: #fff;
+                background-color: #ffffff;
+                color: #3F4FCF;
             }
         }
 
         .even-row {
-            background-color: grey;
+            background-color: #3F4FCF;
         }
 
         .odd-row {
-            background-color: rgb(212, 212, 212);
+            background-color: #525FFF;
         }
     }
 }

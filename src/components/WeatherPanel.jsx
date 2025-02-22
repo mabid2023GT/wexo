@@ -2,6 +2,7 @@
 import '../assets/styles/WeatherPanel.scss';
 import Query from '../components/Query';
 import QueryResults from '../components/QueryResults';
+// import Weather from '../components/Weather';
 
 const WeatherPanel = () => {
     return (
@@ -14,6 +15,7 @@ const WeatherPanel = () => {
             </div>
             <div className="query-results-container">
                 <QueryResults />
+                {/* <Weather /> */}
             </div>
       </div>
     );

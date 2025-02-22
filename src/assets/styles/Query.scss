@@ -1,32 +1,32 @@
 
-:root {
-    --search-section-width: 50%;
-    --search-button-width: 15%;
-    --font-size-base: 1.5rem;
+.search-section, .search-button {
+    --search-section-width: 40%;
+    --search-button-width: 10%;
+    --font-size-base: 1.2rem;
 }
 
 // Media queries for responsive design
 // Adjusting the font size on different screen sizes
 @media (max-width: 1200px) {
-    :root {
+    .search-section, .search-button {
         --search-section-width: 60%;
         --search-button-width: 20%;
         // Adjust font size for bigger screens (like laptops and desktops).
-        --font-size-base: 1.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    :root {
-        --search-section-width: 70%;
-        --search-button-width: 20%;
-        // Adjust font size for tablets.
         --font-size-base: 1rem;
     }
 }
 
+@media (max-width: 768px) {
+    .search-section, .search-button {
+        --search-section-width: 70%;
+        --search-button-width: 20%;
+        // Adjust font size for tablets.
+        --font-size-base: 0.9rem;
+    }
+}
+
 @media (max-width: 480px) {
-    :root {
+    .search-section, .search-button {
         --search-section-width: 65%;
         --search-button-width: 25%;
         // Adjust font size for mobile screens.
@@ -44,6 +44,7 @@
     background: #fff;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     border-radius: 20rem;
+    // border: 0.1rem solid #000000; 
     
     // Focus effect for the section
     &.focused {
@@ -63,18 +64,27 @@
         // Remove outline on focus
         outline: none;
         font-size: var(--font-size-base); 
+        color: #22264D;
+        
+    }
+
+    ::placeholder {
+        color: #767A9D;
+        // Ensure it's fully visible
+        opacity: 1;
     }
 }
 
 .search-button {
     width: var(--search-button-width);
     height: 60%;
-    background: linear-gradient(135deg, #fbbd5d, #f4a261);
+    background: #4CC9F0;
     display: flex;
     justify-content: center;
     align-items: center;
     // Rounded corners for modern feel
     border-radius: 3rem;
+    // border: 0.1rem solid #000000; 
     // Soft shadow for depth, in rem
     box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
     // Smooth transition for hover effects
@@ -94,7 +104,7 @@
         border: none; 
         background: transparent; 
         // text color
-        color: #fff;
+        color: #FFFFFF;
         font-size:  var(--font-size-base);
         font-weight: bold;
         // Rounded corners on button
@@ -103,7 +113,7 @@
         cursor: pointer;
 
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
 
         &:focus {
@@ -113,7 +123,7 @@
 
         &:active {
             // Slightly shrink when the button is clicked
-            transform: scale(0.98);   
+            transform: scale(0.78);   
         }
     }
 }

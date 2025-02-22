@@ -3,5 +3,5 @@
 .app {
   width: variables.$app-width;
   height: variables.$app-height;
-  background: #f34747;
+  background: variables.$app-background-color;
 }

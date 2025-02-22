@@ -5,7 +5,6 @@
     width: variables.$header-width; 
     // Ensure the header spans the 10% of the page height
     height: variables.$header-height;
-    background: #01aaf3;
     // Setup header display
     display: flex;
     // Ensure the logo and app name are displayed on the start side
@@ -33,6 +32,7 @@
     .appTitle {
         // Adjust margin for big-sized screens
         margin-inline-start: 2%;
+        color: #FFFFFF;
 
         // Adjust margin for tablet-sized screens
         @media (max-width: 768px) {

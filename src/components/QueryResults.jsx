@@ -25,7 +25,7 @@ const QueryResults = () => {
                 <ul>
                     {cities.map((city, index) => (
                         <li key={index} className={index % 2 === 0 ? "even-row" : "odd-row"}>
-                            {city}
+                            - {city}
                         </li>
                     ))}
                 </ul>

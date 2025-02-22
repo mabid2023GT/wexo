@@ -1,0 +1,43 @@
+.weather-container {
+    --weather-container-width: 90%;
+    --weather-container-height: 90%;
+    --h3-height: calc(var(--weather-container-height) * 0.15);
+    --result-container: calc(var(--weather-container-height) - var(--h3-height));
+    --font-size-base: 1.2rem;
+}
+
+.weather-container {
+    width: var(--weather-container-width);
+    height: var(--weather-container-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    h3 {
+        width: 100%;
+        height: var(--h3-height);
+        color: #B8BDFF;
+        font-size: var(--font-size-base);
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        justify-content: center; /* Centers text horizontally */
+        align-items: center; /* Centers text vertically */
+    }
+
+    .result-container {
+        width: 100%;
+        height: var(--result-container);
+        color: #F5F5FF;
+        font-size: var(--font-size-base);
+    
+        .temperature-container {
+            text-align: start;
+        }
+    
+        .wind-container {
+            text-align: start;
+        }
+    } 
+}
