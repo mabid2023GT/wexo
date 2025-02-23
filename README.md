@@ -3,6 +3,8 @@
 ## Project Overview
 The Weather App allows users to search for a city and view the current weather conditions. The app makes use of the **OpenStreetMap API** to search for cities and the **Open-Meteo API** to fetch weather data for the selected city. The app also features a Header and Footer, displays loading states, and handles errors effectively.
 
+The Weather App is live and can be accessed online. You can view the app by visiting the following URL: https://wexo-phase1.web.app/
+
 ## Features
 - Search for cities using the OpenStreetMap API.
 - Select the correct city from multiple search results.
@@ -20,7 +22,7 @@ The Weather App allows users to search for a city and view the current weather c
 
 ## Installation Instructions
 
-1. **Clone the Repository:**
+**Clone the Repository:**
    ```bash
    git clone https://github.com/mabid2023GT/wexo.git
    cd wexo
