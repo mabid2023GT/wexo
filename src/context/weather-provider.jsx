@@ -36,7 +36,6 @@ export const WeatherProvider = ({ children }) => {
     try {
       const data = await fetchCityData(query);
       setCitySearchResults(data);
-      triggerError("Testing Error: searchCity()");
     } catch (err) {
       console.error(err.message);
       triggerError(err.message);
